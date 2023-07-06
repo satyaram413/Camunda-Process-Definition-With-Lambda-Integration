@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:zeebe="http://camunda.org/schema/zeebe/1.0" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" id="Definitions_1" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Web Modeler" exporterVersion="48d65f3" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.2.0" camunda:diagramRelationId="f2482d05-e76d-4f82-aac6-91f8be2c8a88">
+  <bpmn:process id="Process_1o9e6u7" isExecutable="true">
+    <bpmn:extensionElements>
+      <zeebe:userTaskForm id="userTaskForm_2pdjc0p">{
+  "components": [
+    {
+      "label": "Customer Name",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0dg7jui",
+        "columns": 7
+      },
+      "id": "Field_1f0xxvd",
+      "key": "field_1chi7k7"
+    },
+    {
+      "label": "Text field",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0dg7jui",
+        "columns": null
+      },
+      "id": "Field_0t9oequ",
+      "key": "field_05svmsy"
+    },
+    {
+      "label": "Total Incoming Calls Minutes of usage",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1stle3c",
+        "columns": 7
+      },
+      "id": "Field_175heln",
+      "key": "total_ic_mou"
+    },
+    {
+      "label": "Average Revenue per usage",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1stle3c",
+        "columns": null
+      },
+      "id": "Field_15i93x1",
+      "key": "arpu"
+    },
+    {
+      "label": "Total Recharge Amount Diff",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1p7m47n",
+        "columns": 7
+      },
+      "id": "Field_1x9t3db",
+      "key": "total_rech_amt_diff"
+    },
+    {
+      "label": "Total Outgoing Minutes of Usage",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1p7m47n",
+        "columns": null
+      },
+      "id": "Field_1i42993",
+      "key": "total_og_mou"
+    },
+    {
+      "label": "Roaming Incoming Call Minutes of Usage",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_11ox94c",
+        "columns": 7
+      },
+      "id": "Field_0uwh6g4",
+      "key": "roam_ic_mou"
+    },
+    {
+      "label": "Roaming Outgoing  Minutes of Usage",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_11ox94c",
+        "columns": 9
+      },
+      "id": "Field_1h6odua",
+      "key": "roam_og_mou"
+    },
+    {
+      "label": "STD incoming  Minutes of Usage",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1x947lf",
+        "columns": 7
+      },
+      "id": "Field_1fmwwlq",
+      "key": "std_ic_mou"
+    },
+    {
+      "label": "Average Recharge Amnt Data",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1x947lf",
+        "columns": 9
+      },
+      "id": "Field_0hgelys",
+      "key": "av_rech_amt_data"
+    },
+    {
+      "label": "STD outgoing  Minutes of Usage",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_065tmmm",
+        "columns": null
+      },
+      "id": "Field_0q5prvr",
+      "key": "std_og_mou"
+    }
+  ],
+  "schemaVersion": 9,
+  "exporter": {
+    "name": "Camunda Web Modeler",
+    "version": "48d65f3"
+  },
+  "type": "default",
+  "id": "Form_0f3z1h5",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.2.0"
+}
+</zeebe:userTaskForm>
+    </bpmn:extensionElements>
+    <bpmn:startEvent id="StartEvent_1">
+      <bpmn:outgoing>Flow_024wvut</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:sequenceFlow id="Flow_024wvut" sourceRef="StartEvent_1" targetRef="Activity_1n4y76p" />
+    <bpmn:serviceTask id="Activity_0cgq2iw" name="Connect To Lambda" zeebe:modelerTemplate="io.camunda.connectors.AWSLAMBDA.v2" zeebe:modelerTemplateVersion="2" zeebe:modelerTemplateIcon="data:image/svg+xml;utf8,%3Csvg width=&#39;18&#39; height=&#39;18&#39; viewBox=&#39;0 0 48 48&#39; version=&#39;1.1&#39; xmlns=&#39;http://www.w3.org/2000/svg&#39; xmlns:xlink=&#39;http://www.w3.org/1999/xlink&#39;%3E%3Ctitle%3EIcon-Resource/Compute/Res_Amazon-Lambda_Lambda-Function_48_Light%3C/title%3E%3Cg id=&#39;Icon-Resource/Compute/Res_Amazon-Lambda_Lambda-Function_48&#39; stroke=&#39;none&#39; stroke-width=&#39;1&#39; fill=&#39;none&#39; fill-rule=&#39;evenodd&#39;%3E%3Cpath d=&#39;M24,44 C12.972,44 4,35.028 4,24 C4,12.972 12.972,4 24,4 C35.028,4 44,12.972 44,24 C44,35.028 35.028,44 24,44 L24,44 Z M24,2 C11.869,2 2,11.869 2,24 C2,36.131 11.869,46 24,46 C36.131,46 46,36.131 46,24 C46,11.869 36.131,2 24,2 L24,2 Z M17.231,35.25 L11.876,35.25 L18.221,21.959 L20.902,27.492 L17.231,35.25 Z M19.114,19.215 C18.946,18.87 18.597,18.651 18.214,18.651 L18.211,18.651 C17.826,18.652 17.477,18.874 17.312,19.221 L9.389,35.819 C9.24,36.129 9.262,36.493 9.445,36.783 C9.628,37.074 9.947,37.25 10.291,37.25 L17.864,37.25 C18.251,37.25 18.603,37.027 18.769,36.678 L22.915,27.915 C23.044,27.642 23.043,27.323 22.911,27.051 L19.114,19.215 Z M36.125,35.25 L30.673,35.25 L20.761,13.953 C20.597,13.601 20.243,13.375 19.854,13.375 L16.251,13.375 L16.255,9.25 L23.475,9.25 L33.339,30.545 C33.503,30.898 33.856,31.125 34.246,31.125 L36.125,31.125 L36.125,35.25 Z M37.125,29.125 L34.885,29.125 L25.021,7.83 C24.856,7.477 24.503,7.25 24.113,7.25 L15.256,7.25 C14.704,7.25 14.257,7.697 14.256,8.249 L14.25,14.374 C14.25,14.64 14.355,14.894 14.543,15.082 C14.73,15.27 14.984,15.375 15.25,15.375 L19.217,15.375 L29.129,36.672 C29.293,37.024 29.646,37.25 30.035,37.25 L37.125,37.25 C37.678,37.25 38.125,36.803 38.125,36.25 L38.125,30.125 C38.125,29.572 37.678,29.125 37.125,29.125 L37.125,29.125 Z&#39; id=&#39;Amazon-Lambda-Lambda-Function_Resource-Icon_light-bg&#39; fill=&#39;%23D45B07&#39;%3E%3C/path%3E%3C/g%3E%3C/svg%3E">
+      <bpmn:extensionElements>
+        <zeebe:taskDefinition type="io.camunda:aws-lambda:1" />
+        <zeebe:ioMapping>
+          <zeebe:input source="" target="authentication.accessKey" />
+          <zeebe:input source="" target="authentication.secretKey" />
+          <zeebe:input source="us-west-2" target="configuration.region" />
+          <zeebe:input source="sync" target="awsFunction.operationType" />
+          <zeebe:input source="camundaTelecomChurn" target="awsFunction.functionName" />
+          <zeebe:input source="={&#10;  &#34;data&#34;: {&#10;    &#34;total_ic_mou_8&#34;: total_ic_mou,&#10;    &#34;total_rech_amt_diff&#34;: total_rech_amt_diff,&#10;    &#34;total_og_mou_8&#34;: total_og_mou,&#10;    &#34;arpu_8&#34;: arpu,&#10;    &#34;roam_ic_mou_8&#34;: roam_ic_mou,&#10;    &#34;roam_og_mou_8&#34;: roam_og_mou,&#10;    &#34;std_ic_mou_8&#34;: std_ic_mou,&#10;    &#34;av_rech_amt_data_8&#34;: av_rech_amt_data,&#10;    &#34;std_og_mou_8&#34;: std_og_mou&#10;  }&#10;}" target="awsFunction.payload" />
+        </zeebe:ioMapping>
+        <zeebe:taskHeaders>
+          <zeebe:header key="resultVariable" value="output" />
+        </zeebe:taskHeaders>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_1ike391</bpmn:incoming>
+      <bpmn:outgoing>Flow_0g045yo</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:endEvent id="Event_0pipoqr">
+      <bpmn:incoming>Flow_1f4tip9</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_0g045yo" sourceRef="Activity_0cgq2iw" targetRef="Gateway_1u9qzgl" />
+    <bpmn:sequenceFlow id="Flow_1ike391" sourceRef="Activity_1n4y76p" targetRef="Activity_0cgq2iw" />
+    <bpmn:userTask id="Activity_1n4y76p" name="Take User Details">
+      <bpmn:extensionElements>
+        <zeebe:formDefinition formKey="camunda-forms:bpmn:userTaskForm_2pdjc0p" />
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_024wvut</bpmn:incoming>
+      <bpmn:outgoing>Flow_1ike391</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:exclusiveGateway id="Gateway_1u9qzgl">
+      <bpmn:incoming>Flow_0g045yo</bpmn:incoming>
+      <bpmn:outgoing>Flow_1f4tip9</bpmn:outgoing>
+      <bpmn:outgoing>Flow_0218pue</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:sequenceFlow id="Flow_1f4tip9" name="prediction==&#34;Customer will stay&#34;" sourceRef="Gateway_1u9qzgl" targetRef="Event_0pipoqr">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">=output.payload="Customer will stay"</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:endEvent id="Event_14vpb7i">
+      <bpmn:incoming>Flow_0m4igh3</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_0218pue" name="prediction==&#34;Customer will stay&#34;" sourceRef="Gateway_1u9qzgl" targetRef="Activity_0pb8iks">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">=output.payload= "Customer will go"</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_0m4igh3" sourceRef="Activity_0pb8iks" targetRef="Event_14vpb7i" />
+    <bpmn:userTask id="Activity_0pb8iks" name="Learn About Customer Churn">
+      <bpmn:incoming>Flow_0218pue</bpmn:incoming>
+      <bpmn:outgoing>Flow_0m4igh3</bpmn:outgoing>
+    </bpmn:userTask>
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Process_1o9e6u7">
+      <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
+        <dc:Bounds x="152" y="132" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_01ulm9k_di" bpmnElement="Activity_0cgq2iw">
+        <dc:Bounds x="430" y="110" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0pipoqr_di" bpmnElement="Event_0pipoqr">
+        <dc:Bounds x="1032" y="132" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0sy39ni_di" bpmnElement="Activity_1n4y76p">
+        <dc:Bounds x="260" y="110" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_1u9qzgl_di" bpmnElement="Gateway_1u9qzgl" isMarkerVisible="true">
+        <dc:Bounds x="605" y="125" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_14vpb7i_di" bpmnElement="Event_14vpb7i">
+        <dc:Bounds x="1032" y="282" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_07kdgsy_di" bpmnElement="Activity_0pb8iks">
+        <dc:Bounds x="770" y="260" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_024wvut_di" bpmnElement="Flow_024wvut">
+        <di:waypoint x="188" y="150" />
+        <di:waypoint x="260" y="150" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0g045yo_di" bpmnElement="Flow_0g045yo">
+        <di:waypoint x="530" y="150" />
+        <di:waypoint x="605" y="150" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1ike391_di" bpmnElement="Flow_1ike391">
+        <di:waypoint x="360" y="150" />
+        <di:waypoint x="430" y="150" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1f4tip9_di" bpmnElement="Flow_1f4tip9">
+        <di:waypoint x="655" y="150" />
+        <di:waypoint x="1032" y="150" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="776" y="116" width="88" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0218pue_di" bpmnElement="Flow_0218pue">
+        <di:waypoint x="630" y="175" />
+        <di:waypoint x="630" y="300" />
+        <di:waypoint x="770" y="300" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="676" y="266" width="88" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0m4igh3_di" bpmnElement="Flow_0m4igh3">
+        <di:waypoint x="870" y="300" />
+        <di:waypoint x="1032" y="300" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>
