@@ -1,0 +1,123 @@
+{
+  "components": [
+    {
+      "label": "Customer Name",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0dg7jui",
+        "columns": 7
+      },
+      "id": "Field_1f0xxvd",
+      "key": "field_1chi7k7"
+    },
+    {
+      "label": "Text field",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0dg7jui",
+        "columns": null
+      },
+      "id": "Field_0t9oequ",
+      "key": "field_05svmsy"
+    },
+    {
+      "label": "Total Incoming Calls Minutes of usage",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1stle3c",
+        "columns": 7
+      },
+      "id": "Field_175heln",
+      "key": "total_ic_mou"
+    },
+    {
+      "label": "Average Revenue per usage",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1stle3c",
+        "columns": null
+      },
+      "id": "Field_15i93x1",
+      "key": "arpu"
+    },
+    {
+      "label": "Total Recharge Amount Diff",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1p7m47n",
+        "columns": 7
+      },
+      "id": "Field_1x9t3db",
+      "key": "total_rech_amt_diff"
+    },
+    {
+      "label": "Total Outgoing Minutes of Usage",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1p7m47n",
+        "columns": null
+      },
+      "id": "Field_1i42993",
+      "key": "total_og_mou"
+    },
+    {
+      "label": "Roaming Incoming Call Minutes of Usage",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_11ox94c",
+        "columns": 7
+      },
+      "id": "Field_0uwh6g4",
+      "key": "roam_ic_mou"
+    },
+    {
+      "label": "Roaming Outgoing  Minutes of Usage",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_11ox94c",
+        "columns": 9
+      },
+      "id": "Field_1h6odua",
+      "key": "roam_og_mou"
+    },
+    {
+      "label": "STD incoming  Minutes of Usage",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1x947lf",
+        "columns": 7
+      },
+      "id": "Field_1fmwwlq",
+      "key": "std_ic_mou"
+    },
+    {
+      "label": "Average Recharge Amnt Data",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1x947lf",
+        "columns": 9
+      },
+      "id": "Field_0hgelys",
+      "key": "av_rech_amt_data"
+    },
+    {
+      "label": "STD outgoing  Minutes of Usage",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_065tmmm",
+        "columns": null
+      },
+      "id": "Field_0q5prvr",
+      "key": "std_og_mou"
+    }
+  ],
+  "schemaVersion": 9,
+  "exporter": {
+    "name": "Camunda Web Modeler",
+    "version": "48d65f3"
+  },
+  "type": "default",
+  "id": "Form_0f3z1h5",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.2.0"
+}
